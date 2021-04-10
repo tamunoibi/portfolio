@@ -1,66 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<link
-			href="https://fonts.googleapis.com/css?family=Poppins:400,500&display=swap"
-			rel="stylesheet"
-		/>
-		<link rel="stylesheet" href="./style.css" />
-		<title>Ib Tech</title>
-	</head>
-	<body>
-		<header>
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<link href="https://fonts.googleapis.com/css?family=Poppins:400,500&display=swap" rel="stylesheet" />
+	<link rel="stylesheet" href="./style.css" />
+	<title>Ib Tech</title>
+</head>
+
+<body>
+	<!-- ======================================= Headers -->
+	<header>
+		<a href="/">
 			<div class="logo-container">
 				<img src="./img/logo.svg" alt="logo" />
-				<h4 class="logo">Ib Tech</h4>
+				<!-- <h4 class="logo">Ib Tech</h4> -->
 			</div>
-			<nav>
-				<ul class="nav-links">
-					<li><a class="nav-link" href="#">Home</a></li>
-					<li><a class="nav-link" href="#">Portfolio</a></li>
-					<li><a class="nav-link" href="#">Articles</a></li>
-				</ul>
-			</nav>
-			<div class="cart">
-				<!-- <img src="./img/cart.svg" alt="cart" /> -->
-				<a href="https://www.youtube.com/channel/UCkmtt-FyRnUoBskxiPFdZHw">
-				<img src="./img/logo/youtubeLogo.png" class="logoImg" alt="cart" /></a>
-			</div>
-		</header>
+		</a>
 
-		<main>
-			<section class="presentation">
-				<div class="introduction">
-					<div class="intro-text">
-						<h1>Tamunoibi Aprekuma</h1>
-						<p>
-							I make pixel perfect UI and buttery smooth mobile animations with react native.
-						</p>
-					</div>
-					<div class="cta">
-						<button class="cta-select">About</button>
-						<a href="https://drive.google.com/file/d/14vXUVb7Zf7d7FBk9tMTm0XpLbca-rCKk/view?usp=sharing"><button class="cta-add">CV</button></a>
-					</div>
+		<nav>
+			<ul class="nav-links">
+				<li><a class="nav-link active" href="./">About</a></li>
+				<li><a class="nav-link" href="./portfolio/portfolio.html">Portfolio</a></li>
+				<li><a class="nav-link" href="./blog/blog.html">Blog</a></li>
+			</ul>
+		</nav>
+		<!-- <div class="cart">
+			<a href="https://www.youtube.com/channel/UCkmtt-FyRnUoBskxiPFdZHw">
+				<img src="./img/logo/youtubeLogo.png" class="youtubeImg" alt="cart" /></a>
+		</div> -->
+	</header>
+	<!-- ======================================= About -->
+
+	<main>
+		<section class="presentation">
+			<div class="introduction">
+				<div class="intro-text">
+					<h1>Tamunoibi Aprekuma</h1>
+					<p>
+						I am make pixel perfect UI and battery smooth animations with react and react native.
+					</p>
 				</div>
-				<div class="cover">
-					<img src="./img/matebook.png" alt="matebook" />
+				<div class="cta">
+					<a href="https://www.youtube.com/channel/UCkmtt-FyRnUoBskxiPFdZHw"><button class="cta-select">Youtube</button></a> 
+
+					<a href="https://drive.google.com/file/d/14vXUVb7Zf7d7FBk9tMTm0XpLbca-rCKk/view?usp=sharing"> <button class="cta-add">CV</button></a>
+					<!-- <a href="https://drive.google.com/file/d/14vXUVb7Zf7d7FBk9tMTm0XpLbca-rCKk/view?usp=sharing"> <button class="cta-add">CV</button></a> -->
 				</div>
-			</section>
-
-			<div class="laptop-select">
-				<a href="https://github.com/tamunoibi"><img src="./img/logo/github.png" alt="" class="logoImg"/></a>
-				<a href="mailto:tamunoibiAprekum@gmail.com"><img src="./img/logo/gmaillogo.png" alt="" class="logoGmail"/></a>
-				<a href="https://web.facebook.com/tamunoibiA/"><img src="./img/logo/facebook.png" alt="" class="logoImg"/></a>
-				<a href="https://www.linkedin.com/in/tamunoibiaprekuma/"><img src="./img/logo/linkedin.png" alt="" class="logoLinkedin"/></a>
-				<a href="https://twitter.com/tamunoibi__"><img src="./img/logo/twitter.png" alt="" class="logoTwitter"/></a>
 			</div>
+			<!-- TODO: commented out the image. this is not responsive -->
+			<div class="cover">
+				<img src="./img/tamunoibiAprekuma.png" alt="Tamunoibi Aprekuma" />
+			</div>
+		</section>
 
-			<img class="big-circle" src="./img/big-eclipse.svg" alt="" />
-			<img class="medium-circle" src="./img/mid-eclipse.svg" alt="" />
-			<img class="small-circle" src="./img/small-eclipse.svg" alt="" />
-		</main>
-	</body>
+		<div class="social-media-links">
+			<a href="https://github.com/tamunoibi"><img src="./img/logo/github.png" alt="" class="logoImg" /></a>
+			<a href="mailto:tamunoibiAprekum@gmail.com"><img src="./img/logo/gmaillogo.png" alt=""
+					class="logoGmail" /></a>
+			<a href="https://web.facebook.com/tamunoibiA/"><img src="./img/logo/facebook.png" alt=""
+					class="logoImg" /></a>
+			<a href="https://www.linkedin.com/in/tamunoibiaprekuma/"><img src="./img/logo/linkedin.png" alt=""
+					class="logoLinkedin" /></a>
+			<a href="https://twitter.com/tamunoibi__"><img src="./img/logo/twitter.png" alt=""
+					class="logoTwitter" /></a>
+		</div>
+		<!-- ======================================= Contact -->
+		<!-- TODO: commented out the image. this is not responsive -->
+
+		<img class="big-circle" src="./img/big-eclipse.svg" alt="" />
+		<img class="medium-circle" src="./img/mid-eclipse.svg" alt="" />
+		<img class="small-circle hide-on-tab" src="./img/small-eclipse.svg" alt="" />
+	</main>
+</body>
+
 </html>

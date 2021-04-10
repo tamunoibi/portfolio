@@ -1,15 +1,19 @@
+@import 'style/helperStyles.css';
 * {
-	margin: 0px;
-	padding: 0px;
-	box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
 }
 
 body {
-	font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    color: #5f5f79;
 }
+
 button {
-	font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
+
 header {
     display: flex;
     width: 80%;
@@ -17,44 +21,80 @@ header {
     height: 10vh;
     align-items: center;
 }
+
 .logo-container, .nav-links, .cart {
     display: flex;
 }
+
 .logo {
     font-weight: 400;
     margin: 5px;
 }
-.logo-container{
+
+.logo-container {
     flex: 1;
 }
-nav{
+
+nav {
     flex: 2;
 }
+
 .nav-links {
     justify-content: space-around;
     list-style: none;
 }
+
 .nav-link {
     color: #5f5f79;
     font-size: 18px;
     text-decoration: none;
+    position: relative;
+    padding: 0.5em;
 }
-.cart{
+
+.nav-link::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 10;
+    width: 80%;
+    height: 2px;
+    background-color: #5f5f79;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.nav-link:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+.cart {
     flex: 1;
     justify-content: flex-end;
 }
+
 .logoImg {
     height: 50px;
     width: 50px;
 }
+
+.youtubeImg {
+    width: 70px;
+    height: 50px;
+}
+
 .logoTwitter {
     height: 25px;
     width: 50px;
 }
+
 .logoGmail {
     height: 50px;
     width: 100px;
 }
+
 .presentation {
     display: flex;
     width: 90%;
@@ -62,9 +102,11 @@ nav{
     min-height: 80vh;
     align-items: center;
 }
+
 .introduction {
     flex: 1;
 }
+
 .intro-text h1 {
     font-size: 44px;
     font-weight: 500;
@@ -72,15 +114,37 @@ nav{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
 .intro-text p {
     margin-top: 5px;
     font-size: 22px;
     color: #585772;
 }
+
 .cta {
-    padding: 50px  0 0 0;
+    display: flex;
+    padding: 50px 0 0 0;
+}
+.cta-select, .cta-add  {
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    font-size: 16px;
 }
 .cta-select {
+    background: transparent;
+    border: 2px solid #c36cbb;
+    color: #c36cbb;
+}
+
+.cta-add {
+    background-color: #c36cbb;
+    border: none;
+    color: white;
+    margin-left: 30px; 
+}
+
+/* .cta-select {
     border: 2px solid #c36cbb;
     background: transparent;
     color: #c36cbb;
@@ -89,6 +153,7 @@ nav{
     cursor: pointer;
     font-size: 16px;
 }
+
 .cta-add {
     background-color: #c36cbb;
     width: 150px;
@@ -98,18 +163,22 @@ nav{
     border: none;
     color: white;
     margin: 30px 0 0 30px;
-}
+} */
+
 .cover {
     flex: 1;
     display: flex;
     justify-content: center;
     height: 100%;
 }
+
 .cover img {
     height: 60vh;
+    /* width: 100px; */
     filter: drop-shadow(0 5px 3px black);
     animation: drop 3s ease;
 }
+
 .big-circle {
     position: absolute;
     top: 0;
@@ -118,6 +187,7 @@ nav{
     opacity: 0.5;
     height: 80%;
 }
+
 .medium-circle {
     position: absolute;
     top: 30%;
@@ -126,13 +196,15 @@ nav{
     height: 60%;
     opacity: 0.4;
 }
+
 .small-circle {
     position: absolute;
     bottom: 0%;
     left: 20%;
     z-index: -1;
 }
-.laptop-select {
+
+.social-media-links {
     width: 15%;
     display: flex;
     justify-content: space-evenly;
@@ -140,11 +212,34 @@ nav{
     position: absolute;
     right: 20%;
 }
+
 .logoLinkedin {
     margin: 0 25px;
     height: 40px;
     width: 40px;
 }
+
+a {
+    color: #5f5f79;
+    text-decoration: none;
+}
+
+/* .active {
+    color: red
+} */
+
+.active::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 10;
+    width: 80%;
+    height: 2px;
+    background-color: #5f5f79;
+    visibility: visible;
+    transform: scaleX(1);
+}
+
 @keyframes drop {
     0% {
         opacity: 0;
@@ -153,9 +248,10 @@ nav{
     100% {
         opacity: 1;
         transform: translateY(0px);
-    }   
+    }
 }
-@media screen  and (max-width: 1024px) {
+
+@media screen and (max-width: 1024px) {
     .presentation {
         flex-direction: column;
     }
@@ -163,25 +259,34 @@ nav{
         margin-top: 5vh;
         text-align: center;
     }
-    .intro-text h1{
+    .intro-text h1 {
         font-size: 30px;
     }
     .intro-text p {
         font-size: 18px;
     }
     .cta {
-        padding: 10px 0 0 0;
+        padding-top: 10px;
+        flex-direction: column;
+        align-items: center;
     }
-    .laptop-select {
+    .cta-add {
+        margin: 5px 0 0 0; 
+    }
+    .social-media-links {
         bottom: 5%;
         right: 50%;
         width: 50%;
         transform: translate(50% 5%);
     }
     .cover img {
-        height: 80%;
+        /* height: 80%; */
+        height: 60%;
+        width: 300px;
     }
-    .small-circle, .medium-circle, .big-circle {
+    /* .small-circle, .medium-circle, .big-circle {
         opacity: 0.2;
-    }
+    } */
+  
+
 }

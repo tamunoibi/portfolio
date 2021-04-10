@@ -1,0 +1,13 @@
+@import "../style.css";
+@import "../style/helperStyles.css";
+.main {
+    padding: 50px 0;
+
+}
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+    padding: 50px 0;
+}

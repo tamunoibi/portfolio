@@ -1,0 +1,24 @@
+/*  ======================================= Color */
+.pri-link-cl {
+    color: #c36cbb
+}
+.background-cl {
+    background-color: #f8f8f8;
+}
+/*  ======================================= Container */
+.main {
+    width: 80%;
+    margin: auto;
+}
+/*  ======================================= Responsive Display */
+
+@media screen and (min-width: 1025px) {
+    .hide-on-desktop {
+        display: none;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .hide-on-tab {
+        display: none;
+    }
+}
